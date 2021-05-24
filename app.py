@@ -203,6 +203,12 @@ class Logic:
     def get_seller_data(self,seller):
         print('Seller name')
         print(seller)
+        collection = db['users']
+        seller_qt = collection.count_documents({'seller': seller})
+        if seller_qt > 0:
+            res = self.seller_date(seller)
+            return res,1
+
         api = finding(siteid='EBAY-US', appid='LubomirV-devbattl-PRD-9b058513b-91c210eb', config_file=None)
         api.execute('findItemsIneBayStores', {
             'storeName': seller,
@@ -265,6 +271,28 @@ class Logic:
             item_res['qt_res'] = qt_arr
             item_arr.append(item_res)
         return item_arr
+labels = [
+    'JAN', 'FEB', 'MAR', 'APR',
+    'MAY', 'JUN', 'JUL', 'AUG',
+    'SEP', 'OCT', 'NOV', 'DEC'
+]
+
+values = [
+    967.67, 1190.89, 1079.75, 1349.19,
+    2328.91, 2504.28, 2873.83, 4764.87,
+    4349.29, 6458.30, 9907, 16297
+]
+
+colors = [
+    "#F7464A", "#46BFBD", "#FDB45C", "#FEDCBA",
+    "#ABCDEF", "#DDDDDD", "#ABCABC", "#4169E1",
+    "#C71585", "#FF4500", "#FEDCBA", "#46BFBD"]
+
+@app.route('/bar')
+def bar():
+    bar_labels=labels
+    bar_values=values
+    return render_template('bar.html', title='Bitcoin Monthly Price in USD', max=17000, labels=bar_labels, values=bar_values)
 
 @app.route('/',methods=['GET','POST'])
 def index(seller=None):
@@ -275,6 +303,11 @@ def index(seller=None):
         a = Logic(db)
         ack_status,status=a.get_seller_data(seller)
         print(ack_status)
+        if status==1:
+            len2 = len(ack_status)
+            print(len2)
+            # post = {'seller': seller}
+            return render_template('index.html', len=len2, seller=ack_status)
         if ack_status==False:
             message = 'This seller don\'t find or have some some problem with request '
             return render_template('index.html',message=message)

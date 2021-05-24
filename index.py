@@ -235,23 +235,59 @@ def runner():
 
 
 from ebaysdk.finding import Connection as finding
+
+
+def seller_date(seller):
+    all_date = {}
+    collection = db['items_data']
+    res = collection.find({'storeName': seller})
+    item_date = res
+
+    item_arr = []
+    for s in item_date:
+        item_res = {}
+        item_res['itemId'] = s.get('itemId')
+        item_res['title'] = s.get('title')
+        item_res['globalId'] = s.get('globalId')
+        item_res['galleryURL'] = s.get('galleryURL')
+        item_res['viewItemURL'] = s.get('viewItemURL')
+        item_res['storeName'] = s.get('storeName')
+        item_res['storeURL'] = s.get('storeURL')
+        item_res['_currencyId'] = s.get('_currencyId')
+        item_res['value'] = s.get('value')
+
+        # print(item_res)
+        collection = db['items_quantity']
+        res_qt = collection.find({'storeName': seller, 'itemId': s.get('itemId')})
+        qt_arr = []
+        for a in res_qt:
+            qt_res = {}
+            # print(a)
+            qt_res['id'] = a.get('itemId')
+            qt_res['date'] = a.get('date')
+            qt_res['qt'] = a.get('quantity')
+            qt_arr.append(qt_res)
+        item_res['qt_res'] = qt_arr
+        item_arr.append(item_res)
+    return item_arr
 def get_seller_data(seller):
     print('Seller name')
     print(seller)
+    collection = db['users']
+    seller_qt = collection.count_documents({'seller': seller})
+    if seller_qt>0:
+        res = seller_date(seller)
+        print(res)
     api = finding(siteid='EBAY-US', appid='LubomirV-devbattl-PRD-9b058513b-91c210eb', config_file=None)
     api.execute('findItemsIneBayStores', {
         'storeName': seller,
-        'outputSelector': 'StoreInfo',
-        'paginationInput': {
-            'entriesPerPage': '100',
-            'pageNumber': 1
-        }
+        'outputSelector': 'StoreInfo'
     })
     dictstr = api.response_dict()
     ack = dictstr.get('ack')
     print(ack)
 
-get_seller_data('wx6688')
+get_seller_data('jacobsparts')
 # #
 # collection = db['items_quantity'] #,'items_quantity','users
 # collection.drop()

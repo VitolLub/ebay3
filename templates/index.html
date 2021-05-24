@@ -1,4 +1,11 @@
-sdfasd
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>{{ title }}</title>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+</head>
+<body>
 <p>sdfasd</p>
 <form method="post">
     <input name="seller" value="Seller" type="text">
@@ -12,6 +19,7 @@ sdfasd
             <li>{{len}}</li>
     {% endif %}
     {% if seller  %}
+        <p>{{ seller[0].qt_res[0] }}</p>
         {%for i in range(0, len)%}
             <table style="width:100%">
               <tr>
@@ -37,3 +45,6 @@ sdfasd
         {%endfor%}
     {% endif %}
    </ul>
+
+</body>
+</html>
