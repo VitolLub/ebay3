@@ -45,6 +45,244 @@
         {%endfor%}
     {% endif %}
    </ul>
-
+<main>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="disable-text-selection col">
+                <div class="row">
+                    <div class="col col-12"><h1>Thumb List</h1>
+                        <div class="top-right-button-container">
+                            <button type="button" class="btn top-right-button btn-primary btn-lg">ADD NEW</button>
+                            <div role="group" class="btn-group">
+                                <div class="dropdown b-dropdown check-button btn-group" id="__BVID__154">
+                                    <button type="button" class="btn btn-primary" id="__BVID__154__BV_button_"><label
+                                            class="custom-control custom-checkbox pl-4 mb-0 d-inline-block"><input
+                                            type="checkbox" class="custom-control-input"> <span
+                                            class="custom-control-label indeterminate">&nbsp;</span></label></button>
+                                    <button aria-haspopup="true" aria-expanded="false" type="button"
+                                            class="btn dropdown-toggle btn-primary dropdown-toggle-split"
+                                            id="__BVID__154__BV_toggle_"><span class="sr-only">Toggle dropdown</span>
+                                    </button>
+                                    <ul role="menu" tabindex="-1" class="dropdown-menu dropdown-menu-right"
+                                        aria-labelledby="__BVID__154__BV_button_">
+                                        <li role="presentation"><a role="menuitem" href="#" target="_self"
+                                                                   class="dropdown-item">Delete</a></li>
+                                        <li role="presentation"><a role="menuitem" href="#" target="_self"
+                                                                   class="dropdown-item">Another action</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!----> <span><!----> <ul
+                                class="nav pt-0 breadcrumb-container d-none d-sm-block d-lg-inline-block"><ol
+                                class="breadcrumb"><li class="breadcrumb-item"><a href="/app" class="active"
+                                                                                  target="_self">Home</a></li><li
+                                class="breadcrumb-item"><a href="/app/pages" class="active"
+                                                           target="_self">Pages</a></li><li class="breadcrumb-item"><a
+                                href="/app/pages/product" class="active" target="_self">Product</a></li><li
+                                class="breadcrumb-item active"><span aria-current="location">Thumb List</span></li></ol></ul></span>
+                        <div class="mb-2 mt-2">
+                            <button type="button" class="btn pt-0 pl-0 d-inline-block d-md-none btn-empty collapsed"
+                                    aria-expanded="false" aria-controls="displayOptions" style="overflow-anchor: none;">
+                                Display Options
+                                <i class="simple-icon-arrow-down align-middle"></i></button>
+                            <div id="displayOptions" class="d-md-block collapse" style="display: none;"><span
+                                    class="mr-3 d-inline-block float-md-left"><a class="mr-2 view-icon"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><path
+                                    d="M17.5,3H.5a.5.5,0,0,1,0-1h17a.5.5,0,0,1,0,1Z" class="view-icon-svg"></path> <path
+                                    d="M17.5,10H.5a.5.5,0,0,1,0-1h17a.5.5,0,0,1,0,1Z" class="view-icon-svg"></path> <path
+                                    d="M17.5,17H.5a.5.5,0,0,1,0-1h17a.5.5,0,0,1,0,1Z"
+                                    class="view-icon-svg"></path></svg></a> <a class="mr-2 view-icon active"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><path
+                                    d="M17.5,3H6.5a.5.5,0,0,1,0-1h11a.5.5,0,0,1,0,1Z" class="view-icon-svg"></path> <path
+                                    d="M3,2V3H1V2H3m.12-1H.88A.87.87,0,0,0,0,1.88V3.12A.87.87,0,0,0,.88,4H3.12A.87.87,0,0,0,4,3.12V1.88A.87.87,0,0,0,3.12,1Z"
+                                    class="view-icon-svg"></path> <path
+                                    d="M3,9v1H1V9H3m.12-1H.88A.87.87,0,0,0,0,8.88v1.24A.87.87,0,0,0,.88,11H3.12A.87.87,0,0,0,4,10.12V8.88A.87.87,0,0,0,3.12,8Z"
+                                    class="view-icon-svg"></path> <path
+                                    d="M3,16v1H1V16H3m.12-1H.88a.87.87,0,0,0-.88.88v1.24A.87.87,0,0,0,.88,18H3.12A.87.87,0,0,0,4,17.12V15.88A.87.87,0,0,0,3.12,15Z"
+                                    class="view-icon-svg"></path> <path
+                                    d="M17.5,10H6.5a.5.5,0,0,1,0-1h11a.5.5,0,0,1,0,1Z" class="view-icon-svg"></path> <path
+                                    d="M17.5,17H6.5a.5.5,0,0,1,0-1h11a.5.5,0,0,1,0,1Z"
+                                    class="view-icon-svg"></path></svg></a> <a class="mr-2 view-icon"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19 19"><path
+                                    d="M7,2V8H1V2H7m.12-1H.88A.87.87,0,0,0,0,1.88V8.12A.87.87,0,0,0,.88,9H7.12A.87.87,0,0,0,8,8.12V1.88A.87.87,0,0,0,7.12,1Z"
+                                    class="view-icon-svg"></path> <path
+                                    d="M17,2V8H11V2h6m.12-1H10.88a.87.87,0,0,0-.88.88V8.12a.87.87,0,0,0,.88.88h6.24A.87.87,0,0,0,18,8.12V1.88A.87.87,0,0,0,17.12,1Z"
+                                    class="view-icon-svg"></path> <path
+                                    d="M7,12v6H1V12H7m.12-1H.88a.87.87,0,0,0-.88.88v6.24A.87.87,0,0,0,.88,19H7.12A.87.87,0,0,0,8,18.12V11.88A.87.87,0,0,0,7.12,11Z"
+                                    class="view-icon-svg"></path> <path
+                                    d="M17,12v6H11V12h6m.12-1H10.88a.87.87,0,0,0-.88.88v6.24a.87.87,0,0,0,.88.88h6.24a.87.87,0,0,0,.88-.88V11.88a.87.87,0,0,0-.88-.88Z"
+                                    class="view-icon-svg"></path></svg></a></span>
+                                <div class="d-block d-md-inline-block pt-1">
+                                    <div id="ddown1" class="dropdown b-dropdown mr-1 float-md-left btn-group btn-group">
+                                        <!---->
+                                        <button id="ddown1__BV_toggle_" aria-haspopup="true" aria-expanded="false"
+                                                type="button" class="btn dropdown-toggle btn-outline-dark btn-xs">Order
+                                            By : Product Name
+                                        </button>
+                                        <ul role="menu" tabindex="-1" aria-labelledby="ddown1__BV_toggle_"
+                                            class="dropdown-menu" style="">
+                                            <li role="presentation"><a role="menuitem" href="#" target="_self"
+                                                                       class="dropdown-item">Product Name</a></li>
+                                            <li role="presentation"><a role="menuitem" href="#" target="_self"
+                                                                       class="dropdown-item">Category</a></li>
+                                            <li role="presentation"><a role="menuitem" href="#" target="_self"
+                                                                       class="dropdown-item">Status</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="search-sm d-inline-block float-md-left mr-1 align-top"><input
+                                            type="text" placeholder="Search" class="form-control" id="__BVID__174">
+                                    </div>
+                                </div>
+                                <div class="float-md-right pt-1"><span
+                                        class="text-muted text-small mr-1 mb-2">1-4 of 20</span>
+                                    <div id="ddown2" class="dropdown b-dropdown d-inline-block btn-group"><!---->
+                                        <button id="ddown2__BV_toggle_" aria-haspopup="true" aria-expanded="false"
+                                                type="button" class="btn dropdown-toggle btn-outline-dark btn-xs">4
+                                        </button>
+                                        <ul role="menu" tabindex="-1" aria-labelledby="ddown2__BV_toggle_"
+                                            class="dropdown-menu dropdown-menu-right">
+                                            <li role="presentation"><a role="menuitem" href="#" target="_self"
+                                                                       class="dropdown-item">4</a></li>
+                                            <li role="presentation"><a role="menuitem" href="#" target="_self"
+                                                                       class="dropdown-item">8</a></li>
+                                            <li role="presentation"><a role="menuitem" href="#" target="_self"
+                                                                       class="dropdown-item">12</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="separator mb-5"></div>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <div class="mb-3 col col-12" id="18">
+                            <div class="card d-flex flex-row active"><!----><!----><a
+                                    href="/app/pages/product/thumb-list?p=18" class="d-flex"><img
+                                    src="/assets/img/products/bebinca-thumb.jpg" alt="Bebinca"
+                                    class="list-thumbnail responsive border-0"></a>
+                                <div class="pl-2 d-flex flex-grow-1 min-width-zero">
+                                    <div class="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
+                                        <a href="/app/pages/product/thumb-list?p=18" class="w-40 w-sm-100"><p
+                                                class="list-item-heading mb-0 truncate">Bebinca</p></a>
+                                        <p class="mb-0 text-muted text-small w-15 w-sm-100">Desserts</p>
+                                        <p class="mb-0 text-muted text-small w-15 w-sm-100">13.05.2021</p>
+                                        <div class="w-15 w-sm-100"><span class="badge badge-secondary badge-pill">PROCESSED</span>
+                                        </div>
+                                    </div>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <div class="itemCheck mb-0 custom-control custom-checkbox"><input
+                                                type="checkbox" class="custom-control-input" value="true"
+                                                id="__BVID__193"><label class="custom-control-label"
+                                                                        for="__BVID__193"></label></div>
+                                    </div>
+                                </div><!----><!----></div>
+                        </div>
+                        <div class="mb-3 col col-12" id="8">
+                            <div class="card d-flex flex-row"><!----><!----><a href="/app/pages/product/thumb-list?p=8"
+                                                                               class="d-flex"><img
+                                    src="/assets/img/products/cheesecake-thumb.jpg" alt="Cheesecake"
+                                    class="list-thumbnail responsive border-0"></a>
+                                <div class="pl-2 d-flex flex-grow-1 min-width-zero">
+                                    <div class="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
+                                        <a href="/app/pages/product/thumb-list?p=8" class="w-40 w-sm-100"><p
+                                                class="list-item-heading mb-0 truncate">Cheesecake</p></a>
+                                        <p class="mb-0 text-muted text-small w-15 w-sm-100">Cakes</p>
+                                        <p class="mb-0 text-muted text-small w-15 w-sm-100">18.05.2021</p>
+                                        <div class="w-15 w-sm-100"><span
+                                                class="badge badge-primary badge-pill">ON HOLD</span></div>
+                                    </div>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <div class="itemCheck mb-0 custom-control custom-checkbox"><input
+                                                type="checkbox" class="custom-control-input" value="true"
+                                                id="__BVID__198"><label class="custom-control-label"
+                                                                        for="__BVID__198"></label></div>
+                                    </div>
+                                </div><!----><!----></div>
+                        </div>
+                        <div class="mb-3 col col-12" id="3">
+                            <div class="card d-flex flex-row"><!----><!----><a href="/app/pages/product/thumb-list?p=3"
+                                                                               class="d-flex"><img
+                                    src="/assets/img/products/chocolate-cake-thumb.jpg" alt="Chocolate Cake"
+                                    class="list-thumbnail responsive border-0"></a>
+                                <div class="pl-2 d-flex flex-grow-1 min-width-zero">
+                                    <div class="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
+                                        <a href="/app/pages/product/thumb-list?p=3" class="w-40 w-sm-100"><p
+                                                class="list-item-heading mb-0 truncate">Chocolate Cake</p></a>
+                                        <p class="mb-0 text-muted text-small w-15 w-sm-100">Cakes</p>
+                                        <p class="mb-0 text-muted text-small w-15 w-sm-100">14.05.2021</p>
+                                        <div class="w-15 w-sm-100"><span class="badge badge-secondary badge-pill">PROCESSED</span>
+                                        </div>
+                                    </div>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <div class="itemCheck mb-0 custom-control custom-checkbox"><input
+                                                type="checkbox" class="custom-control-input" value="true"
+                                                id="__BVID__203"><label class="custom-control-label"
+                                                                        for="__BVID__203"></label></div>
+                                    </div>
+                                </div><!----><!----></div>
+                        </div>
+                        <div class="mb-3 col col-12" id="19">
+                            <div class="card d-flex flex-row"><!----><!----><a href="/app/pages/product/thumb-list?p=19"
+                                                                               class="d-flex"><img
+                                    src="/assets/img/products/cremeschnitte-thumb.jpg" alt="Cremeschnitte"
+                                    class="list-thumbnail responsive border-0"></a>
+                                <div class="pl-2 d-flex flex-grow-1 min-width-zero">
+                                    <div class="card-body align-self-center d-flex flex-column flex-lg-row justify-content-between min-width-zero align-items-lg-center">
+                                        <a href="/app/pages/product/thumb-list?p=19" class="w-40 w-sm-100"><p
+                                                class="list-item-heading mb-0 truncate">Cremeschnitte</p></a>
+                                        <p class="mb-0 text-muted text-small w-15 w-sm-100">Desserts</p>
+                                        <p class="mb-0 text-muted text-small w-15 w-sm-100">12.05.2021</p>
+                                        <div class="w-15 w-sm-100"><span
+                                                class="badge badge-primary badge-pill">ON HOLD</span></div>
+                                    </div>
+                                    <div class="custom-control custom-checkbox pl-1 align-self-center pr-4">
+                                        <div class="itemCheck mb-0 custom-control custom-checkbox"><input
+                                                type="checkbox" class="custom-control-input" value="true"
+                                                id="__BVID__208"><label class="custom-control-label"
+                                                                        for="__BVID__208"></label></div>
+                                    </div>
+                                </div><!----><!----></div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-12">
+                            <nav aria-hidden="false" aria-label="Pagination" per-page="4">
+                                <ul aria-disabled="false" class="pagination b-pagination justify-content-center">
+                                    <li aria-hidden="true" class="page-item disabled"><span
+                                            aria-label="Go to first page" aria-disabled="true" class="page-link"><i
+                                            class="simple-icon-control-start"></i></span></li>
+                                    <li aria-hidden="true" class="page-item disabled"><span
+                                            aria-label="Go to previous page" aria-disabled="true" class="page-link"><i
+                                            class="simple-icon-arrow-left"></i></span></li><!----><!---->
+                                    <li class="page-item active"><a aria-label="Go to page 1" aria-current="page"
+                                                                    href="#page-1" target="_self"
+                                                                    class="page-link">1</a></li>
+                                    <li class="page-item"><a aria-label="Go to page 2" href="#page-2" target="_self"
+                                                             class="page-link">2</a></li>
+                                    <li class="page-item"><a aria-label="Go to page 3" href="#page-3" target="_self"
+                                                             class="page-link">3</a></li>
+                                    <li class="page-item bv-d-xs-down-none"><a aria-label="Go to page 4" href="#page-4"
+                                                                               target="_self" class="page-link">4</a>
+                                    </li>
+                                    <li class="page-item bv-d-xs-down-none"><a aria-label="Go to page 5" href="#page-5"
+                                                                               target="_self" class="page-link">5</a>
+                                    </li><!----><!---->
+                                    <li class="page-item"><a aria-label="Go to next page" href="#page-2" target="_self"
+                                                             class="page-link"><i
+                                            class="simple-icon-arrow-right"></i></a></li>
+                                    <li class="page-item"><a aria-label="Go to last page" href="#page-5" target="_self"
+                                                             class="page-link"><i
+                                            class="simple-icon-control-end"></i></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
 </body>
 </html>
