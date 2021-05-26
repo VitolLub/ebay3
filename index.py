@@ -237,59 +237,90 @@ def runner():
 from ebaysdk.finding import Connection as finding
 
 
-def seller_date(seller):
-    all_date = {}
-    collection = db['items_data']
-    res = collection.find({'storeName': seller})
-    item_date = res
+item_id_list = ['313527610431', '313405796455', '313196903613', '313354425821', '313542408589', '313501143473', '313410361989', '313542233569', '313483155805', '313210272486', '313522052796', '313519712455', '313451778900', '313534522250', '313355095876', '313195478845', '313291300069', '313105844017', '313492458384', '313477404859', '313319528712', '313520651830', '313518187623', '313525230134', '313527594236', '313542402658', '313426685551', '313524002102', '313146855168', '313519469531', '313116139055', '313118396549', '313542359602', '313404837128', '313221875437', '313441621342', '313501131874', '313487197999', '313441619591', '313459308663', '313429298090', '313483940894', '313508675077', '313416126401', '313528697498', '313540380567', '313540374162', '313451551635', '313541505050', '313334373336']
 
-    item_arr = []
-    for s in item_date:
-        item_res = {}
-        item_res['itemId'] = s.get('itemId')
-        item_res['title'] = s.get('title')
-        item_res['globalId'] = s.get('globalId')
-        item_res['galleryURL'] = s.get('galleryURL')
-        item_res['viewItemURL'] = s.get('viewItemURL')
-        item_res['storeName'] = s.get('storeName')
-        item_res['storeURL'] = s.get('storeURL')
-        item_res['_currencyId'] = s.get('_currencyId')
-        item_res['value'] = s.get('value')
 
-        # print(item_res)
-        collection = db['items_quantity']
-        res_qt = collection.find({'storeName': seller, 'itemId': s.get('itemId')})
-        qt_arr = []
-        for a in res_qt:
-            qt_res = {}
-            # print(a)
-            qt_res['id'] = a.get('itemId')
-            qt_res['date'] = a.get('date')
-            qt_res['qt'] = a.get('quantity')
-            qt_arr.append(qt_res)
-        item_res['qt_res'] = qt_arr
-        item_arr.append(item_res)
-    return item_arr
-def get_seller_data(seller):
-    print('Seller name')
-    print(seller)
-    collection = db['users']
-    seller_qt = collection.count_documents({'seller': seller})
-    if seller_qt>0:
-        res = seller_date(seller)
-        print(res)
-    api = finding(siteid='EBAY-US', appid='LubomirV-devbattl-PRD-9b058513b-91c210eb', config_file=None)
-    api.execute('findItemsIneBayStores', {
-        'storeName': seller,
-        'outputSelector': 'StoreInfo'
-    })
-    dictstr = api.response_dict()
-    ack = dictstr.get('ack')
-    print(ack)
+def save_item_quantity(item_id_list, seller):
+    # print('save_item_quantity')
+    # url = "https://offer.ebay.com/ws/eBayISAPI.dll?ViewBidsLogin&item=" + item_id_list
+    # # url='https://www.proxysite.com/'
+    # collection = db['items_quantity']
+    # ip_addresses = ['109.74.195.4:80', '138.201.2.120:3128', '138.68.165.154:8080', '61.37.223.152:8080',
+    #                 '161.202.226.194:80', '5.252.161.48:8080', '82.99.232.18:58689']
+    # proxy_index = random.randint(0, len(ip_addresses) - 1)
+    # print(proxy_index)
+    # proxy = {"http": ip_addresses[proxy_index]}
+    # print(proxy)
+    # r = requests.get(url, proxies=proxy)
+    # print(r.status_code)
+    # soup = BeautifulSoup(r.content, 'lxml')
+    # arr_quntiry = []
+    # res_quantity = soup.findAll('td', {"class": "contentValueFont", "align": "middle"})
+    # for q in res_quantity:
+    #     try:
+    #         # print(q.text)
+    #         arr_quntiry.append(q.text)
+    #     except:
+    #         pass
+    # res_date = soup.findAll('td', {"class": "contentValueFont"})
+    # dada_arr = []
+    # arr = []
+    # for result in res_date:
+    #     date_time_str = result.text
+    #
+    #     if fin_in_string(date_time_str) == False:
+    #         print(date_time_str)
+    #         print(fin_in_string(date_time_str))
+    #         try:
+    #             # print(date_time_str)
+    #             aa = parse(date_time_str, fuzzy_with_tokens=True)
+    #             print('Correct')
+    #             print(aa)
+    #             print(aa[0])
+    #             print(aa[0].strftime('%Y-%m-%d'))
+    #             date_check = aa[0].strftime('%Y-%m-%d')
+    #             arr.append(date_check)
+    #         except:
+    #             pass
 
-get_seller_data('jacobsparts')
+    arr = ['2021-05-25', '2021-05-23', '2021-05-22', '2021-05-22', '2021-05-21', '2021-05-20', '2021-05-20', '2021-05-20', '2021-05-18', '2021-05-16', '2021-05-12', '2021-05-10', '2021-05-10', '2021-05-09', '2021-05-07', '2021-05-02', '2021-05-01', '2021-04-30', '2021-04-25', '2021-04-24', '2021-04-23', '2021-04-22', '2021-04-21', '2021-04-18', '2021-04-18', '2021-04-18', '2021-04-18', '2021-04-16', '2021-04-15', '2021-04-13', '2021-04-11', '2021-04-11', '2021-04-10', '2021-04-10', '2021-04-09', '2021-04-02', '2021-04-01', '2021-04-01', '2021-03-31', '2021-03-31', '2021-03-31', '2021-03-30', '2021-03-30', '2021-03-29', '2021-03-29', '2021-03-29', '2021-03-29', '2021-03-27', '2021-03-27', '2021-03-27', '2021-03-26', '2021-03-26', '2021-03-25', '2021-03-24', '2021-03-24', '2021-03-24', '2021-03-24', '2021-03-23', '2021-03-22', '2021-03-21', '2021-03-21', '2021-03-20', '2021-03-20', '2021-03-20', '2021-03-19', '2021-03-18', '2021-03-16', '2021-03-15', '2021-03-14', '2021-03-11', '2021-05-04', '2021-04-13', '2021-03-28', '2021-03-24', '2021-03-23', '2021-03-22', '2021-03-16', '2021-03-16', '2020-12-25', '2020-12-24', '2020-12-23', '2020-12-14', '2020-12-07', '2020-12-04', '2020-12-04', '2020-12-03', '2020-11-29', '2020-11-29', '2020-11-17', '2020-11-08', '2021-05-25', '2021-05-11', '2021-04-22', '2021-04-18', '2021-04-09', '2021-03-25', '2021-03-23', '2021-03-17', '2021-01-04', '2021-01-02', '2021-01-01', '2020-12-26', '2020-12-15', '2020-12-05', '2020-12-02', '2020-11-18', '2020-11-14', '2020-11-13', '2020-11-08', '2020-09-07', '2020-09-07', '2020-08-26']
+
+
+    arr_quntiry=['1', '2', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '4', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '2', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2', '1', '2', '1', '3', '3', '3', '2', '1', '1', '1', '2', '1', '1', '1', '1', '1', '1', '1', '3', '1', '1', '1', '2', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '1', '2']
+
+
+    print('arr_quntiry + arr')
+    print(arr)
+    print(len(arr))
+    print(arr_quntiry)
+    print(len(arr_quntiry))
+    print(arr[0])
+    print(arr_quntiry[0])
+    acc = {}
+    print('Start to count quantyt by date')
+    index=0
+    for da  in arr:
+        print('Index'+str(index))
+        print(da)
+        print(arr[index])
+        print(arr_quntiry[index])
+        print('quntyt sell in ' + arr[index]+' '+arr_quntiry[index])
+        print(arr_quntiry[index])
+        qts = arr_quntiry[index]
+        try:
+            acc[arr[index]] +=int(qts)
+        except:
+            acc[arr[index]] = 0
+            acc[arr[index]] += int(qts)
+        print(acc)
+        index += 1
+
+#save_item_quantity(item_id_list[0],'redstarus')
+#get_seller_data('jacobsparts')
 # #
 # collection = db['items_quantity'] #,'items_quantity','users
 # collection.drop()
-# collection = db['items_data'] #,'items_quantity','users
-# collection.drop()
+collection = db['items_data'] #,'items_quantity','users
+collection.remove({'storeName':'redstarus'})
+collection = db['items_quantity'] #,'items_quantity','users
+collection.remove({'storeName':'redstarus'})
