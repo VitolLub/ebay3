@@ -47,7 +47,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../ebay3" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
-  <component name="RunManager" selected="Flask server.Flask (app.py)">
+  <component name="RunManager" selected="Python.index">
     <configuration name="ebay" type="PythonConfigurationType" factoryName="Python">
       <module name="ebay" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -138,7 +138,8 @@
       <workItem from="1621705597070" duration="12769000" />
       <workItem from="1621874768819" duration="13206000" />
       <workItem from="1621967759506" duration="8953000" />
-      <workItem from="1622051301179" duration="4067000" />
+      <workItem from="1622051301179" duration="8236000" />
+      <workItem from="1622222828155" duration="10050000" />
     </task>
     <task id="LOCAL-00001" summary="first commit2">
       <created>1620855444389</created>
@@ -182,7 +183,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621892558914</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Connect to Db">
+      <created>1622055650433</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1622055650433</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -208,14 +216,18 @@
     <option name="LAST_COMMIT_MESSAGE" value="Connect to Db" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="361" y="71" key="#Inspections" timestamp="1622056244736">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="361" y="71" key="#Inspections/0.0.1536.824@0.0.1536.824" timestamp="1622056244736" />
     <state x="397" y="71" key="#Notifications" timestamp="1620855521773">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="397" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1620855521773" />
-    <state x="429" y="7" key="CommitChangelistDialog2" timestamp="1621892557692">
+    <state x="429" y="7" key="CommitChangelistDialog2" timestamp="1622055647235">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="429" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1621892557692" />
+    <state x="429" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1622055647235" />
     <state x="584" y="154" key="FileChooserDialogImpl" timestamp="1620855009066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -228,22 +240,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="675" y="306" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1620853746877" />
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1622055397878">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1622323768948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622055397878" />
-    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1622055397878">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622323768948" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1622323768948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622055397878" />
-    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1622055397878">
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622323768948" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1622323768948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622055397878" />
-    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1622055397878">
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622323768948" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1622323768948">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622055397878" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622323768948" />
     <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1621976597670">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -268,10 +280,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="397" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1620936502820" />
-    <state x="501" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1622051345493">
+    <state x="501" y="236" key="com.intellij.ide.util.TipDialog" timestamp="1622222828341">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="501" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1622051345493" />
+    <state x="501" y="236" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1622222828341" />
     <state x="366" y="148" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1621449517466">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -286,8 +298,8 @@
     <state x="651" y="187" key="svn4idea.import.options/0.0.1536.824@0.0.1536.824" timestamp="1620854742713" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ebay$index.coverage" NAME="index Coverage Results" MODIFIED="1622053643781" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ebay$index.coverage" NAME="index Coverage Results" MODIFIED="1622323752504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ebay$ebay.coverage" NAME="ebay Coverage Results" MODIFIED="1621454526353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/ebay$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1622055397864" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ebay$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1622323768938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

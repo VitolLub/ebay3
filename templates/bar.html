@@ -1,176 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
   <meta charset="utf-8" />
   <title>{{ title }}</title>
   <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
 </head>
 
 <body>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
   <center>
     <h1>{{ title }}</h1>
   </center>
   <center>
     <a href="#" id="demo" onclick="getDate(this,[100, 200.89, 400.75, 1349.19,
-                          2328.91, 2504.28, 2873.83, 4764.87,
-                          4349.29, 100.30, 500, 800])" value="sdfsd">dfds</a>
-    <canvas id="chart" width="600" height="400" style="display: none;"></canvas>
+                          2328.91, 222.28, 2873.83, 4764.87,
+                          4349.29, 100.30],['2021-05-21', '2021-05-22', '2021-05-23','2021-05-24','2021-05-25','2021-05-26','2021-05-27','2021-05-28','2021-05-29','2021-05-30'])" value="sdfsd">dfds1</a>
+      <a href="#" id="demo" onclick="getDate(this,[100, 200.89, 400.75, 1349.19,
+                          2328.91, 2504.28, 2873.83, 100.87,
+                          4349.29, 100.30],['2021-05-21', '2021-05-22', '2021-05-23','2021-05-24','2021-05-25','2021-05-26','2021-05-27','2021-05-28','2021-05-29','2021-05-30'])" value="sdfsd">dfds2</a>
+      <a href="#" id="demo" onclick="getDate(this,[25, 200.89, 400.75, 1349.19,
+                          2328.91, 11.28, 20.83, 4764.87,
+                          4349.29, 100.30],['2021-05-21', '2021-05-22', '2021-05-23','2021-05-24','2021-05-25','2021-05-26','2021-05-27','2021-05-28','2021-05-29','2021-05-30'])" value="sdfsd">dfds3</a>
+ <script>
+
+                      var myGeocode = ['['2021-05-25', '2021-05-24', '2021-05-23', '2021-05-22', '2021-05-21', '2021-05-20', '2021-05-19', '2021-05-18', '2021-05-17', '2021-05-16', '2021-05-15', '2021-05-14', '2021-05-13', '2021-05-12', '2021-05-11', '2021-05-10', '2021-05-09', '2021-05-07', '2021-05-06', '2021-05-05', '2021-05-04', '2021-05-03', '2021-05-02', '2021-05-01', '2021-04-30', '2021-04-29', '2021-04-28', '2021-04-27', '2021-04-26', '2021-04-25', '2021-04-24', '2021-04-23', '2021-04-22', '2021-04-21', '2021-04-20', '2021-04-19', '2021-04-18', '2021-04-17', '2021-04-16', '2021-04-11', '2021-04-10', '2021-04-09', '2021-04-07', '2021-04-01', '2021-03-31', '2021-03-30', '2021-03-26', '2021-03-25', '2021-03-24', '2021-03-23', '2021-03-21', '2021-03-18', '2021-04-02', '2021-03-27']'];
+                      alert(myGeocode[0]);
+                    </script>
       <script>
-          window.chartColors = {
-      red: 'rgb(255, 99, 132)',
-      orange: 'rgb(255, 159, 64)',
-      yellow: 'rgb(255, 205, 86)',
-      green: 'rgb(75, 192, 192)',
-      blue: 'rgb(54, 162, 235)',
-      purple: 'rgb(153, 102, 255)',
-      grey: 'rgb(201, 203, 207)'
-    };
-var config = {
-   type: 'doughnut',
-   data: {
-    datasets: [{
-     data: [
-      ab_val,
-      BC_val,
-      mb_val,
-      nb_val,
-      nl_val,
-     ],
-     backgroundColor: [
-      window.chartColors.red,
-      window.chartColors.orange,
-      window.chartColors.yellow,
-      window.chartColors.green,
-      window.chartColors.blue,
-     ],
-     label: 'Dataset 1'
-    }],
-    labels: pro_unique
-   },
-   options: {
-    responsive: true,
-    legend: {
-     position: 'top',
-    },
-    title: {
-     display: true,
-     text: 'Total counts of confirmed cases in Canada'
-    },
-    animation: {
-     animateScale: true,
-     animateRotate: true
-    }
-   }
-  };
-window.onload = function() {
-   var ctx = document.getElementById('chart-area').getContext('2d');
-   window.myDoughnut = new Chart(ctx, config);
-  };
-document.getElementById('randomizeData').addEventListener('click', function() {
-   config.data.datasets.forEach(function(dataset) {
-    dataset.data = dataset.data.map(function() {
-     return randomScalingFactor();
-    });
-   });
-window.myDoughnut.update();
-  });
-var colorNames = Object.keys(window.chartColors);
-  document.getElementById('addDataset').addEventListener('click', function() {
-   var newDataset = {
-    backgroundColor: [],
-    data: [],
-    label: 'New dataset ' + config.data.datasets.length,
-   };
-for (var index = 0; index < config.data.labels.length; ++index) {
-    newDataset.data.push(randomScalingFactor());
-var colorName = colorNames[index % colorNames.length];
-    var newColor = window.chartColors[colorName];
-    newDataset.backgroundColor.push(newColor);
-   }
-config.data.datasets.push(newDataset);
-   window.myDoughnut.update();
-  });
-document.getElementById('addData').addEventListener('click', function() {
-   if (config.data.datasets.length > 0) {
-    config.data.labels.push('data #' + config.data.labels.length);
-var colorName = colorNames[config.data.datasets[0].data.length % colorNames.length];
-    var newColor = window.chartColors[colorName];
-config.data.datasets.forEach(function(dataset) {
-     dataset.data.push(randomScalingFactor());
-     dataset.backgroundColor.push(newColor);
-    });
-window.myDoughnut.update();
-   }
-  });
-document.getElementById('removeDataset').addEventListener('click', function() {
-   config.data.datasets.splice(0, 1);
-   window.myDoughnut.update();
-  });
-document.getElementById('removeData').addEventListener('click', function() {
-   config.data.labels.splice(-1, 1); // remove the label first
-config.data.datasets.forEach(function(dataset) {
-    dataset.data.pop();
-    dataset.backgroundColor.pop();
-   });
-window.myDoughnut.update();
-  });
-document.getElementById('changeCircleSize').addEventListener('click', function() {
-   if (window.myDoughnut.options.circumference === Math.PI) {
-    window.myDoughnut.options.circumference = 2 * Math.PI;
-    window.myDoughnut.options.rotation = -Math.PI / 2;
-   } else {
-    window.myDoughnut.options.circumference = Math.PI;
-    window.myDoughnut.options.rotation = -Math.PI;
-   }
-window.myDoughnut.update();
-  });
-              // Line chart
-            new Chart(document.getElementById("chart"), {
-          type: 'line',
-          data: {
-            labels: mon_unique,
-            datasets: [{
-                data: ab_val,
-                label: "Alberta",
-                borderColor: "#3e95cd",
-                fill: false
-              }, {
-                data: BC_val,
-                label: "BC",
-                borderColor: "#8e5ea2",
-                fill: false
-              }, {
-                data: mb_val,
-                label: "Manitoba",
-                borderColor: "#3cba9f",
-                fill: false
-              }, {
-                data: nb_val,
-                label: "New Brunswick",
-                borderColor: "#e8c3b9",
-                fill: false
-              }, {
-                data: nl_val,
-                label: "NL",
-                borderColor: "#c45850",
-                fill: false
+          function getDate(a, myArr,qtarr) {
+              // bar chart data
+              let iterable = qtarr;
+              let qt = myArr;
+              a = [];
+              var i = 0;
+              for (i=0;i<iterable.length;i++) {
+                  a.push({x: new Date(iterable[i]), y: qt[i]});
               }
-            ]
-          },
-          options: {
-            title: {
-              display: true,
-              text: 'Positive Cases of COVID in provinces of Canada'
-            },
-            hover: {
-             mode: 'index',
-             intersect: true
-            },
-          }
-        });
+              var chart = new CanvasJS.Chart("chartContainer", {
+                  animationEnabled: true,
+                  zoomEnabled: true,
+                  theme: "dark2",
+                  title: {
+                      text: "Selling day by day"
+                  },
+                  data: [{
+                      type: "line",
+                      xValueFormatString: "",
+                      showInLegend: true,
+                      name: "Log Scale",
+
+                      dataPoints: a
+                  }]
+              });
+              chart.render();
+
           }
       </script>
 
+<div id="chartContainer" style="height: 370px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<div style="margin-top:16px;color:dimgrey;font-size:9px;font-family: Verdana, Arial, Helvetica, sans-serif;text-decoration:none;">Source: <a href="https://canvasjs.com/html5-javascript-line-chart/" target="_blank" title="JavaScript Line Charts &amp; Graphs ">https://canvasjs.com/html5-javascript-line-chart/</a></div>
   </center>
 </body>
 </html>
