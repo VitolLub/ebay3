@@ -5,7 +5,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.py" beforeDir="false" afterPath="$PROJECT_DIR$/index.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/bar.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/bar.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -109,8 +108,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Flask server.Flask (app.py)" />
         <item itemvalue="Python.index" />
+        <item itemvalue="Flask server.Flask (app.py)" />
       </list>
     </recent_temporary>
   </component>
@@ -139,7 +138,7 @@
       <workItem from="1621874768819" duration="13206000" />
       <workItem from="1621967759506" duration="8953000" />
       <workItem from="1622051301179" duration="8236000" />
-      <workItem from="1622222828155" duration="10050000" />
+      <workItem from="1622222828155" duration="17143000" />
     </task>
     <task id="LOCAL-00001" summary="first commit2">
       <created>1620855444389</created>
@@ -190,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622055650433</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Connect to Db">
+      <created>1622324352257</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1622324352257</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -224,10 +230,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="397" y="71" key="#Notifications/0.0.1536.824@0.0.1536.824" timestamp="1620855521773" />
-    <state x="429" y="7" key="CommitChangelistDialog2" timestamp="1622055647235">
+    <state x="429" y="7" key="CommitChangelistDialog2" timestamp="1622324348088">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="429" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1622055647235" />
+    <state x="429" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1622324348088" />
     <state x="584" y="154" key="FileChooserDialogImpl" timestamp="1620855009066">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -240,22 +246,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="675" y="306" key="Github.ShareDialog/0.0.1536.824@0.0.1536.824" timestamp="1620853746877" />
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1622323768948">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom" timestamp="1622377284203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622323768948" />
-    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1622323768948">
+    <state width="1493" height="195" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1622377284203" />
+    <state width="1493" height="195" key="GridCell.Tab.0.center" timestamp="1622377284203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622323768948" />
-    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1622323768948">
+    <state width="1493" height="195" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1622377284203" />
+    <state width="1493" height="195" key="GridCell.Tab.0.left" timestamp="1622377284203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622323768948" />
-    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1622323768948">
+    <state width="1493" height="195" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1622377284203" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right" timestamp="1622377284203">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622323768948" />
+    <state width="1493" height="195" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1622377284203" />
     <state width="1493" height="260" key="GridCell.Tab.1.bottom" timestamp="1621976597670">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -298,8 +304,8 @@
     <state x="651" y="187" key="svn4idea.import.options/0.0.1536.824@0.0.1536.824" timestamp="1620854742713" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/ebay$index.coverage" NAME="index Coverage Results" MODIFIED="1622323752504" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/ebay$index.coverage" NAME="index Coverage Results" MODIFIED="1622377284195" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/ebay$ebay.coverage" NAME="ebay Coverage Results" MODIFIED="1621454526353" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/ebay$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1622323768938" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/ebay$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1622325631200" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

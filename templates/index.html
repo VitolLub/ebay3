@@ -15,9 +15,6 @@
     {% if message %}
     {% endif %}
         <p>{{ message }}</p>
-    {% if len  %}
-            <li>{{len}}</li>
-    {% endif %}
     {% if seller  %}
 {#        <p>{{ seller }}</p>#}
         {%for i in range(0, len)%}
@@ -30,8 +27,9 @@
                   <th>Photo</th>
                   <th>Url</th>
                   <th>Seller Name</th>
-                  <th>Mone Kind</th>
-                  <th>MPrice</th>
+                  <th>Kind</th>
+                  <th>Price</th>
+                  <th>Status</th>
               </tr>
               <tr>
                 <td>{{seller[i].itemId}}</td>
@@ -42,6 +40,7 @@
                   <td><a href="{{seller[i].storeURL}}">{{seller[i].storeName}}</a></td>
                   <td>{{seller[i]._currencyId}}</td>
                   <td>{{seller[i].value}}</td>
+                  <td>{{ seller[i].active}}</td>
               </tr>
             </table>
         {%endfor%}

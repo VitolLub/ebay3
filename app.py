@@ -265,7 +265,7 @@ class Logic:
             item_res['storeURL'] = s.get('storeURL')
             item_res['_currencyId'] = s.get('_currencyId')
             item_res['value'] = s.get('value')
-
+            item_res['active'] = s.get('active')
             # print(item_res)
             collection = db['items_quantity']
             res_qt = collection.find({'storeName': seller, 'itemId': s.get('itemId')})

@@ -62,7 +62,27 @@ def ss(seller):
 # #
 # collection = db['items_quantity'] #,'items_quantity','users
 # collection.drop()
-collection = db['items_data'] #,'items_quantity','users
-collection.remove({'storeName':'redstarus'})
-collection = db['items_quantity'] #,'items_quantity','users
-collection.remove({'storeName':'redstarus'})
+# collection = db['items_data'] #,'items_quantity','users
+# collection.remove({'storeName':'redstarus'})
+# collection = db['items_quantity'] #,'items_quantity','users
+# collection.remove({'storeName':'redstarus'})
+date = ['2021-05-30','2021-05-29','2021-05-28','2021-05-28','2021-05-28','2021-05-27','2021-05-26','2021-05-25','2021-05-24','2021-05-23','2021-05-21']
+now  = datetime.today().strftime('%Y-%m-%d')
+print(now)
+lst_7d = datetime.today() - timedelta(days=8)
+lst_7d = lst_7d.strftime('%Y-%m-%d')
+collection = db['items_quantity']
+#res = collection.find({'date': {'$gte': lst_7d, '$lt': now},'storeName':'redstarus','itemId':'313405796455'})#,'storeName':'redstarus','itemId':'313405796455'
+res = collection.aggregate([ { '$match': { 'date': {'$gte': lst_7d, '$lt': now},'storeName': "redstarus",'itemId':'313405796455' } },{
+    '$group': {
+        '_id': 'null',
+        'total': {
+            '$sum': '$quantity'
+        }
+    }
+} ] )
+print(res)
+for a in res:
+    print(a)
+
+#print(now7)
